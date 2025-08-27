@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="About Animal Aid SA — mission, vision, programs, and impact." />
+  <title>About | Animal Aid SA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header Section -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Animal Aid SA home">
+        <img src="../Assets/OIP (1).webp" alt="Animal Aid SA logo" />
+        <span>Animal Aid SA</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="container" role="main">
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>About Animal Aid SA</h1>
+      <p>Based in Johannesburg, we rescue, rehabilitate, and rehome animals while educating communities.</p>
+    </header>
+
+    <!-- Mission & Vision -->
+    <section id="mission-vision" class="split">
+      <div>
+        <h2>Mission</h2>
+        <p>Ensure humane treatment of animals through rescue operations, veterinary care, rehabilitation, adoption services, and education.</p>
+      </div>
+      <div>
+        <h2>Vision</h2>
+        <p>A compassionate South Africa where every animal is treated with kindness and respect.</p>
+      </div>
+    </section>
+
+    <!-- Core Programs -->
+    <section id="programs">
+      <h2>Core Programs</h2>
+      <ul class="checklist">
+        <li>Emergency rescue operations</li>
+        <li>Veterinary care and rehabilitation</li>
+        <li>Adoption & fostering</li>
+        <li>Community education & outreach</li>
+        <li>Reporting channels for animal cruelty</li>
+      </ul>
+    </section>
+
+    <!-- Impact Metrics -->
+    <section id="impact">
+      <h2>Impact Metrics</h2>
+      <div class="stats">
+        <div class="stat"><strong>300+</strong><span>Animals rescued (year)</span></div>
+        <div class="stat"><strong>120+</strong><span>Successful adoptions</span></div>
+        <div class="stat"><strong>80</strong><span>Active volunteers</span></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
+      <ul class="footer-links">
+        <li><a href="docs/README.md">README</a></li>
+        <li><a href="contact.html#locations">Our Locations</a></li>
+        <li><a href="enquiry.html#volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Dynamic Year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

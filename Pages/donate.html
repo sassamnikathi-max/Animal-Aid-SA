@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support Animal Aid SA — donate online or via EFT to help rescues and rehabilitation." />
+  <title>Donate | Animal Aid SA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Skip link for better accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header Section -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Animal Aid SA home">
+        <img src="../Assets/OIP (1).webp" alt="Animal Aid SA logo" />
+        <span>Animal Aid SA</span>
+      </a>
+     </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="container" role="main">
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>Donate</h1>
+      <p>Your support funds rescues, veterinary care, and rehabilitation for animals in need.</p>
+    </header>
+
+    <!-- Donation Options -->
+    <section class="donate-options">
+      <h2>Ways to Give</h2>
+      <ul class="checklist">
+        <li>Once-off donations</li>
+        <li>Monthly sponsorships</li>
+        <li>In-kind donations (food, blankets, toys)</li>
+      </ul>
+
+      <div class="donate-panels">
+        <!-- PayFast Donation -->
+        <div class="panel">
+          <h3>PayFast (Recommended)</h3>
+          <p>Make secure donations via PayFast — the fastest and safest way to support us.</p>
+          <a class="btn" href="#" aria-disabled="true">PayFast Checkout (Coming Soon)</a>
+        </div>
+
+        <!-- Bank EFT Donation -->
+        <div class="panel">
+          <h3>Bank EFT</h3>
+          <p>
+            <strong>Account Name:</strong> Animal Aid SA<br>
+            <strong>Bank:</strong> Standard Bank<br>
+            <strong>Branch Code:</strong> 020909<br>
+            <strong>Account Number:</strong> 123456789
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Receipt Information -->
+    <section aria-labelledby="receipt-title">
+      <h2 id="receipt-title">Need a Section 18A Receipt?</h2>
+      <p>Email your proof of payment to 
+        <a href="mailto:donations@animalaidsa.org.za">donations@animalaidsa.org.za</a> 
+        and we’ll issue your tax-deductible receipt.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
+      <ul class="footer-links">
+        <li><a href="docs/README.md">README</a></li>
+        <li><a href="contact.html#locations">Our Locations</a></li>
+        <li><a href="enquiry.html#volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JavaScript for dynamic footer year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Animal Aid SA — locations, phone numbers, and contact form." />
+  <title>Contact | Animal Aid SA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Animal Aid SA home">
+        <img src="../Assets/OIP (1).webp" alt="Animal Aid SA logo" />
+        <span>Animal Aid SA</span>
+      </a>
+     </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <header class="page-header">
+      <h1>Contact Us</h1>
+      <p>We operate across Gauteng with partner shelters nationwide.</p>
+    </header>
+
+    <section id="locations" class="locations">
+      <h2>Locations</h2>
+      <div class="location-grid">
+        <div class="map-embed">
+          <h3>Johannesburg HQ</h3>
+          <p>123 Rescue Road, Braamfontein, Johannesburg</p>
+          <p><a href="tel:+27115550000">+27 11 555 0000</a></p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14320.47962153565!2d28.018580576828857!3d-26.19277748326802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1974081ac5%3A0xd12a225dc667e805!2sBraamfontein%2C%20Johannesburg%2C%202017%2C%20South%20Africa!5e0!3m2!1sen!2sie!4v1756214848058!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+        <div class="location">
+          <h3>Pretoria Clinic</h3>
+          <p>45 Care Street, Hatfield, Pretoria</p>
+          <p><a href="tel:+27125550000">+27 12 555 0000</a></p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7187.351796709738!2d28.228440027302913!3d-25.74822946226333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95600c742e61e1%3A0x9075d2c9b4ee7098!2sHatfield%2C%20Pretoria%2C%200028%2C%20South%20Africa!5e0!3m2!1sen!2sie!4v1756215016959!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title">Send a Message</h2>
+      <form id="contact-form" class="stacked-form">
+        <label for="c-name">Full name</label>
+        <input id="c-name" name="name" required />
+
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" required />
+
+        <label for="c-topic">Topic</label>
+        <select id="c-topic" name="topic" required>
+          <option value="">Select...</option>
+          <option>Adoption</option>
+          <option>Volunteer</option>
+          <option>Donation</option>
+          <option>Media</option>
+          <option>Other</option>
+        </select>
+
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Send</button>
+        <div id="contact-status" class="sr-status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
+      <ul class="footer-links">
+        <li><a href="docs/README.md">README</a></li>
+        <li><a href="contact.html#locations">Our locations</a></li>
+        <li><a href="enquiry.html#volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Adopt a pet — find animals available for adoption from Animal Aid SA." />
+  <title>Adopt | Animal Aid SA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Animal Aid SA home">
+        <img src="../Assets/OIP (1).webp" alt="Animal Aid SA logo" />
+        <span>Animal Aid SA</span>
+      </a>
+      </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <header class="page-header">
+      <h1>Adopt a Pet</h1>
+      <p>Use filters to find your new best friend. Submit an application and our team will follow up.</p>
+    </header>
+
+    <form id="filter-form" class="filter-form" aria-label="Adoption filters">
+      <div class="form-row">
+        <label for="species">Species</label>
+        <select id="species" name="species">
+          <option value="all">All</option>
+          <option>Dog</option>
+          <option>Cat</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="age">Age</label>
+        <select id="age" name="age">
+          <option value="all">All</option>
+          <option>Puppy/Kitten</option>
+          <option>Young</option>
+          <option>Adult</option>
+          <option>Senior</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="size">Size</label>
+        <select id="size" name="size">
+          <option value="all">All</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+    </form>
+    <section id="adopt-grid" class="grid three" role="region" aria-label="Adoptable animals">
+      <!-- Cards populated with progressive enhancement: items are in HTML for no-JS fallback -->
+      <article class="card adoptable" data-species="Dog" data-age="Adult" data-size="Medium">
+        <img src="../Assets/download 4.webp" alt="Sketch of a happy dog" class="card-media" width="120" height="120">
+        <h3>Rufus</h3>
+        <p>Adult • Medium • Friendly and house-trained.</p>
+        <button class="btn" data-apply data-name="Rufus">Apply</button>
+      </article>
+      <article class="card adoptable" data-species="Cat" data-age="Senior" data-size="Small">
+        <img src="../Assets/download (1).webp" alt="Sketch of a calm cat" class="card-media" width="120" height="120">
+        <h3>Nala</h3>
+        <p>Senior • Small • Lap cat who loves sunbeams.</p>
+        <button class="btn" data-apply data-name="Nala">Apply</button>
+      </article>
+      <article class="card adoptable" data-species="Dog" data-age="Puppy/Kitten" data-size="Large">
+        <img src="../Assets/download (2).webp" alt="Sketch of a puppy" class="card-media" width="120" height="120">
+        <h3>Zeus</h3>
+        <p>Puppy • Large • Goofy and energetic.</p>
+        <button class="btn" data-apply data-name="Zeus">Apply</button>
+      </article>
+      <article class="card adoptable" data-species="Other" data-age="Adult" data-size="Small">
+        <img src="../Assets/download (3).webp" alt="Sketch of a little bird" class="card-media" width="120" height="120">
+        <h3>Sunny</h3>
+        <p>Adult • Small • Socialised cockatiel.</p>
+        <button class="btn" data-apply data-name="Sunny">Apply</button>
+      </article>
+    </section>
+
+    <section aria-labelledby="adoptables-title">
+      <h2 id="adoptables-title">Available for Adoption</h2>
+      <div class="card-grid" id="adopt-grid">
+        <!-- Cards injected by JS from a local dataset -->
+      </div>
+    </section>
+
+    <template id="pet-card">
+      <article class="card pet-card">
+        <img src="" alt="" />
+        <div class="card-body">
+          <h3 class="pet-name"></h3>
+          <p class="pet-meta"></p>
+          <button class="btn small apply-btn" type="button">Apply to Adopt</button>
+        </div>
+      </article>
+    </template>
+
+    <!-- Application Modal -->
+    <dialog id="apply-modal" aria-labelledby="apply-title">
+      <form method="dialog" id="apply-form">
+        <h2 id="apply-title">Adoption Application</h2>
+        <p id="apply-pet"></p>
+        <label for="app-name">Full name</label>
+        <input id="app-name" name="name" required />
+        <label for="app-email">Email</label>
+        <input id="app-email" name="email" type="email" required />
+        <label for="app-message">Message</label>
+        <textarea id="app-message" name="message" rows="4" placeholder="Tell us about your home and experience with pets"></textarea>
+        <div class="dialog-actions">
+          <button class="btn secondary" value="cancel">Cancel</button>
+          <button class="btn" value="submit">Submit</button>
+        </div>
+      </form>
+    </dialog>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
+      <ul class="footer-links">
+        <li><a href="docs/README.md">README</a></li>
+        <li><a href="contact.html#locations">Our locations</a></li>
+        <li><a href="enquiry.html#volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
