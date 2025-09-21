@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head<!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Animal Aid SA — Rescue, rehabilitate, and rehome abused, neglected, and abandoned animals in South Africa." />
@@ -10,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home">
   <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -43,10 +47,10 @@
     <section class="hero" aria-label="Hero">
       <div class="hero-inner">
         <h1>Rescue. Rehabilitate. Rehome.</h1>
-        <p>Together, we can change the lives of abused, neglected, and abandoned animals across South Africa.</p>
+        <p>Every Year thousands of animals in South Africa suffer abuse, neglect,or abandonment. At Animal Aid SA, we believe every creature deserves compassion and a second chance. Our volunteer network and veterinary partners respond to emergancies, provide life saving treatment and find loving homes for rescued animals.</p>
         <div class="cta-group">
-          <a class="btn primary" href="donate.html">Donate Now</a>
-          <a class="btn secondary" href="adopt.html">Find a Friend</a>
+          <a class="btn primary" href="/Pages/donate.html">Donate Now</a>
+          <a class="btn secondary" href="/Pages/adopt.html">Find a Friend</a>
         </div>
       </div>
     </section>
@@ -59,24 +63,24 @@
           <img src="/Assets/sarah.webp" alt="Rescued dog" />
           <div class="card-body">
             <h3>Emergency Rescues</h3>
-            <p>On-call teams respond to cruelty and neglect cases with immediate care and transport.</p>
-            <a class="text-link" href="about.html#programs">Learn more</a>
+            <p>>Our 24/7 hotlinr and mobile teams respond to cruelty cases across Gauteng. From injured street dogs to abondoned kittens, no call is too small.</p>
+            <a class="text-link" href="/Pages/about.html">Learn more</a>
           </div>
         </article>
         <article class="card">
-          <img src="assets/OIP (3).webp" alt="Calm cat" />
+          <img src="/Assets/OIP (3).webp" alt="Calm cat" />
           <div class="card-body">
             <h3>Rehabilitation</h3>
-            <p>Our vets and foster network provide medical care and socialisation for recovery.</p>
-            <a class="text-link" href="about.html#programs">How it works</a>
+            <p>After rescue, each animal receives a tailored care plan, including medical treatment, behavioural support, and safe foster placement .</p>
+            <a class="text-link" href="/Pages/about.html">How it works</a>
           </div>
         </article>
         <article class="card">
-          <img src="assets/download.webp" alt="Paw print" />
+          <img src="/Assets/download.webp" alt="Paw print" />
           <div class="card-body">
             <h3>Adoption & Fostering</h3>
-            <p>We match animals with loving families and support you every step of the journey.</p>
-            <a class="text-link" href="adopt.html">Meet adoptables</a>
+            <p>We carefully match animals with families who are ready to provide a stable and loving environment, and we support you every step of the journey.</p>
+            <a class="text-link" href="/Pages/adopt.html">Meet adoptables</a>
           </div>
         </article>
       </div>
@@ -87,7 +91,14 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
-      
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/14LPC4fTP88/?mibextid=wwXIfr" target="_blank" aria-label="facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://wa.me/0767467581" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
