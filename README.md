@@ -63,7 +63,7 @@ No server setup is required (static website).
 - Add new pages and link them through the navigation bar.
 
 ## Author
-[Your Name] – [Your Student Number]
+Samkelisiwe – ST10459928
 
 ## Changelog
 ### v1.0.0 – Initial Release (2025-09-01)

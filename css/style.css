@@ -1,0 +1,240 @@
+/* ------------------------------
+   Global Dark Theme
+------------------------------ */
+:root {
+    --clr-bg: #0d1117;        /* base dark */
+    --clr-card: #161b22;      /* dark gray card */
+    --clr-accent1: #ff6f61;   /* coral red */
+    --clr-accent2: #4cafef;   /* light blue */
+    --clr-accent3: #22c55e;   /* neon green */
+    --clr-text: #e6edf3;      /* soft white */
+    --clr-muted: #9ba1a6;     /* muted gray */
+  
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Inter", sans-serif;
+  
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.7;
+  }
+  
+  /* ------------------------------
+     Header & Navigation
+  ------------------------------ */
+  .site-header {
+    background: linear-gradient(90deg, #111827, #1f2937);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  }
+  
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--clr-accent2);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+  
+  .site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .site-nav a {
+    color: var(--clr-text);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .site-nav a:hover {
+    color: var(--clr-accent1);
+  }
+  
+  /* ------------------------------
+     Hero Sections (unique per page)
+  ------------------------------ */
+  .hero {
+    text-align: center;
+    padding: 6rem 1rem;
+    color: var(--clr-text);
+    background-size: cover;
+    background-attachment: fixed;
+    animation: gradientMove 10s ease infinite alternate;
+  }
+  
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  }
+  
+  .hero p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    color: var(--clr-muted);
+  }
+  
+  /* Background animation */
+  @keyframes gradientMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+  }
+  
+  /* ------------------------------
+     Buttons
+  ------------------------------ */
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--clr-text);
+    background: linear-gradient(145deg, var(--clr-accent1), var(--clr-accent2));
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  }
+  
+  /* ------------------------------
+     Cards
+  ------------------------------ */
+  .card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .card {
+    background: var(--clr-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    transition: var(--transition);
+  }
+  
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+  
+  /* Smaller card image size for Adopt page */
+  .card img {
+    width: 100%;
+    height: 200px; /* reduced height */
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  
+  .card img:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  /* ------------------------------
+     Moving Image Banner
+  ------------------------------ */
+  .slider {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+  }
+  
+  /* Smaller slider images */
+  .slider img {
+    width: 150px;  /* reduced width */
+    height: 130px; /* reduced height */
+    margin: 0 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  /* ------------------------------
+     Forms
+  ------------------------------ */
+  form {
+    background: var(--clr-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+  }
+  
+  input, select, textarea {
+    background: #0d1117;
+    border: 1px solid #2d3748;
+    color: var(--clr-text);
+    padding: 0.7rem;
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--clr-accent2);
+    box-shadow: 0 0 6px var(--clr-accent2);
+  }
+  
+  /* ------------------------------
+     Footer
+  ------------------------------ */
+  .site-footer {
+    background: #111827;
+    color: var(--clr-muted);
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .footer-links a {
+    color: var(--clr-accent3);
+    transition: var(--transition);
+  }
+  
+  .footer-links a:hover {
+    color: var(--clr-accent1);
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    color: var(--clr-accent3); /* neon green */
+    font-size: 1.5rem;         /* icon size */
+    transition: var(--transition);
+  }
+  
+  .social-icons a:hover {
+    color: var(--clr-accent1); /* coral red on hover */
+  }
+  
