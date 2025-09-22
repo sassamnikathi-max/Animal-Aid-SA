@@ -76,15 +76,18 @@ Samkelisiwe – ST10459928
 - Added animated image slider to Adopt page.
 - Improved mobile responsiveness and form styling.
 
-### v1.2.0 – Content Update (2025-09-20)
+### v1.2.0 – Content & Responsiveness Update (2025-09-25)
 - Added realistic content and images to all pages.
-- Updated adoption profiles and donation details.
-- Enhanced accessibility with alt text and ARIA labels.
+- Adjusted adopt page image sizes for better visibility.
+- Added media queries for tablet and mobile view.
+- Added example responsive image using `<picture>` element.
+- Integrated Font Awesome icons for Facebook and WhatsApp in footer.
 
 ## References
 - [Unsplash.com](https://unsplash.com) – Free animal rescue images  
 - [Pexels.com](https://pexels.com) – Free volunteer and donation images  
-- [PayFast South Africa](https://www.payfast.co.za) – Payment gateway information  
+- [PayFast South Africa](https://www.payfast.co.za) – Payment gateway information 
+ - [Font Awesome](https://fontawesome.com) – Social media icons
 - Google Fonts – Montserrat and Inter typefaces  
 - Original content written by the student based on Animal Aid SA’s fictional scenario.
 
