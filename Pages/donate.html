@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head<!-- Font Awesome CDN -->
+<head>
+  <!-- Font Awesome CDN -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Support Animal Aid SA — donate online or via EFT to help rescues and rehabilitation." />
+  <meta name="description" content="Support Animal Aid SA — donate securely online or via EFT to help with animal rescue, rehabilitation, and adoption efforts." />
+  <meta name="keywords" content="Animal Aid SA donate, animal rescue South Africa, charity donations, animal welfare, PayFast donation" />
+  <meta name="author" content="Animal Aid SA Team" />
   <title>Donate | Animal Aid SA</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="donate">
-  <!-- Skip link for better accessibility -->
+  <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header Section -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Animal Aid SA home">
-        <img src="../Assets/OIP (1).webp" alt="Animal Aid SA logo" />
+      <a class="logo" href="../index.html" aria-label="Animal Aid SA home">
+        <img src="../assets/OIP (1).webp" alt="Animal Aid SA logo" />
         <span>Animal Aid SA</span>
       </a>
+
       <!-- Navigation Menu -->
-      <nav class="site-nav" aria-label="Primary navigation">
-        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">
-          ☰ Menu
-        </button>
-          <a href="/index.html" aria-current="page">Home</a>
-          <a href="/Pages/about.html">About</a>
-          <a href="/Pages/adopt.html">Adopt</a>
-          <a href="/Pages/donate.html">Donate</a>
-          <a href="/Pages/enquiry.html">Enquire</a>
-          <a href="/Pages/contact.html">Contact</a>
+      <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰ Menu</button>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="donate.html" aria-current="page">Donate</a>
+        <a href="enquiry.html">Enquire</a>
+        <a href="contact.html">Contact</a>
       </nav>
-     </div>
+    </div>
   </header>
 
   <!-- Main Content -->
   <main id="main" class="container" role="main">
+
     <!-- Page Header -->
     <header class="page-header">
-      <h1>Donate</h1>
-      <p>Your support funds rescues, veterinary care, and rehabilitation for animals in need.</p>
+      <h1>Make a Donation</h1>
+      <p>Your generosity funds rescues, veterinary treatment, food, and shelter for animals in need. Every contribution makes a real difference.</p>
     </header>
+
+    <!-- Donation Calculator -->
+    <section class="donation-calculator">
+      <h2>Choose Your Donation</h2>
+      <form id="donation-form" class="donate-form" aria-label="Donation Form">
+        <label for="donation-amount">Donation Amount (R)</label>
+        <input id="donation-amount" type="number" min="10" step="10" value="100" required />
+        <p id="impact-message" aria-live="polite">R100 feeds 2 animals for a day 🐾</p>
+
+        <button id="payfast-btn" class="btn primary" type="button">Donate via PayFast</button>
+      </form>
+    </section>
 
     <!-- Donation Options -->
     <section class="donate-options">
-      <h2>Ways to Give</h2>
+      <h2>Other Ways to Give</h2>
       <ul class="checklist">
         <li>Once-off donations</li>
         <li>Monthly sponsorships</li>
@@ -56,13 +72,6 @@
       </ul>
 
       <div class="donate-panels">
-        <!-- PayFast Donation -->
-        <div class="panel">
-          <h3>PayFast (Recommended)</h3>
-          <p>Make secure donations via PayFast — the fastest and safest way to support us.</p>
-          <a class="btn" href="#" aria-disabled="true">PayFast Checkout (Coming Soon)</a>
-        </div>
-
         <!-- Bank EFT Donation -->
         <div class="panel">
           <h3>Bank EFT</h3>
@@ -70,42 +79,80 @@
             <strong>Account Name:</strong> Animal Aid SA<br>
             <strong>Bank:</strong> Standard Bank<br>
             <strong>Branch Code:</strong> 020909<br>
-            <strong>Account Number:</strong> 123456789
+            <strong>Account Number:</strong> 123456789<br>
+            <strong>Reference:</strong> Your Name / Donation
           </p>
+        </div>
+
+        <!-- PayFast Info -->
+        <div class="panel">
+          <h3>PayFast (Online)</h3>
+          <p>Make safe, instant online donations. Our PayFast portal will be launching soon!</p>
+          <button class="btn secondary" disabled>Coming Soon</button>
         </div>
       </div>
     </section>
 
-    <!-- Receipt Information -->
+    <!-- Receipt Info -->
     <section aria-labelledby="receipt-title">
-      <h2 id="receipt-title">Need a Section 18A Receipt?</h2>
+      <h2 id="receipt-title">Need a Tax Receipt?</h2>
       <p>Email your proof of payment to 
         <a href="mailto:donations@animalaidsa.org.za">donations@animalaidsa.org.za</a> 
-        and we’ll issue your tax-deductible receipt.
+        and we’ll issue your Section 18A tax-deductible receipt.
       </p>
     </section>
   </main>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
       <div class="social-icons">
-        <a href="https://www.facebook.com/share/14LPC4fTP88/?mibextid=wwXIfr" target="_blank" aria-label="facebook">
+        <a href="https://www.facebook.com/share/14LPC4fTP88/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://wa.me/0767467581" target="_blank" aria-label="WhatsApp">
+        <a href="https://wa.me/2767467581" target="_blank" aria-label="WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript for dynamic footer year -->
+  <!-- Scripts -->
+  <script src="../js/script.js"></script>
   <script>
+    // Footer Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Donation impact message
+    const amountInput = document.getElementById("donation-amount");
+    const message = document.getElementById("impact-message");
+    const payBtn = document.getElementById("payfast-btn");
+
+    amountInput.addEventListener("input", () => {
+      const value = Number(amountInput.value);
+      if (value >= 50 && value < 200) {
+        message.textContent = `R${value} feeds ${Math.floor(value / 50)} animals for a day 🐕🐈`;
+      } else if (value >= 200 && value < 500) {
+        message.textContent = `R${value} helps cover veterinary care for 1 rescued animal 🩺`;
+      } else if (value >= 500) {
+        message.textContent = `R${value} sponsors a full week of shelter and food for an animal ❤️`;
+      } else {
+        message.textContent = `Minimum donation is R10 — every bit helps!`;
+      }
+    });
+
+    // Simulated payment feedback
+    payBtn.addEventListener("click", () => {
+      const amount = Number(amountInput.value);
+      if (!amount || amount < 10) {
+        alert("Please enter a valid donation amount (minimum R10).");
+        return;
+      }
+      alert(`Thank you for your generosity! A donation of R${amount} has been recorded.`);
+    });
   </script>
-  <script src="js/main.js"></script>
 </body>
 </html>
+
 

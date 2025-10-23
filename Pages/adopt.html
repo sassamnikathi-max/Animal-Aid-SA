@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head<!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+<head>
+  <!-- SEO & Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Adopt a pet — find animals available for adoption from Animal Aid SA." />
+  <meta name="description" content="Adopt a pet — find loving animals ready for adoption from Animal Aid SA." />
+  <meta name="keywords" content="Adopt a dog, adopt a cat, animal rescue, Animal Aid SA" />
+  <meta name="author" content="Animal Aid SA" />
   <title>Adopt | Animal Aid SA</title>
-  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="adopt">
+
+  <!-- Skip to Content -->
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Animal Aid SA home">
-        <img src="../Assets/OIP (1).webp" alt="Animal Aid SA logo" />
+      <a class="logo" href="../index.html" aria-label="Animal Aid SA home">
+        <img src="../assets/OIP (1).webp" alt="Animal Aid SA logo" />
         <span>Animal Aid SA</span>
       </a>
-      <!-- Navigation Menu -->
-      <nav class="site-nav" aria-label="Primary navigation">
-        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">
-          ☰ Menu
-        </button>
-          <a href="/index.html" aria-current="page">Home</a>
-          <a href="/Pages/about.html">About</a>
-          <a href="/Pages/adopt.html">Adopt</a>
-          <a href="/Pages/donate.html">Donate</a>
-          <a href="/Pages/enquiry.html">Enquire</a>
-          <a href="/Pages/contact.html">Contact</a>
+
+      <!-- Navigation -->
+      <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰ Menu</button>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adopt.html" aria-current="page">Adopt</a>
+        <a href="donate.html">Donate</a>
+        <a href="enquiry.html">Enquire</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      </div>
+    </div>
   </header>
 
+  <!-- Main Content -->
   <main id="main" class="container" role="main">
+    <!-- Intro Section -->
     <header class="page-header">
       <h1>Adopt a Pet</h1>
-      <p>Finding a forever friend has never been easier. Animal Aid SA maintains a constantly updated list of adoptable dogs, cats, and other small animals. Each one has been health-checked, vaccinated, and socialised in foster care.</p>
+      <p>Every pet deserves a loving home. Browse through our rescued animals below — each one has been vaccinated, microchipped, and cared for by our volunteer team.</p>
     </header>
 
+    <!-- Filter Form -->
     <form id="filter-form" class="filter-form" aria-label="Adoption filters">
       <div class="form-row">
         <label for="species">Species</label>
-        <select id="species" name="species">
+        <select id="species">
           <option value="all">All</option>
           <option>Dog</option>
           <option>Cat</option>
           <option>Other</option>
         </select>
       </div>
+
       <div class="form-row">
         <label for="age">Age</label>
-        <select id="age" name="age">
+        <select id="age">
           <option value="all">All</option>
           <option>Puppy/Kitten</option>
           <option>Young</option>
@@ -61,9 +72,10 @@
           <option>Senior</option>
         </select>
       </div>
+
       <div class="form-row">
         <label for="size">Size</label>
-        <select id="size" name="size">
+        <select id="size">
           <option value="all">All</option>
           <option>Small</option>
           <option>Medium</option>
@@ -71,77 +83,74 @@
         </select>
       </div>
     </form>
-    <section id="adopt-grid" class="grid three" role="region" aria-label="Adoptable animals">
-      <!-- Cards populated with progressive enhancement: items are in HTML for no-JS fallback -->
+
+    <!-- Adoptable Animals -->
+    <section id="adopt-grid" class="card-grid" role="region" aria-label="Adoptable animals">
       <article class="card adoptable" data-species="Dog" data-age="Adult" data-size="Medium">
-        <img src="../Assets/download 4.webp" alt="Sketch of a happy dog" class="card-media" width="120" height="120">
-        <h3>Rufus</h3>
-        <p>Adult • Medium • Friendly and house-trained.</p>
-        <button class="btn" data-apply data-name="Rufus">Apply</button>
-      </article>
-      <article class="card adoptable" data-species="Cat" data-age="Senior" data-size="Small">
-        <img src="../Assets/download (1).webp" alt="Sketch of a calm cat" class="card-media" width="120" height="120">
-        <h3>Nala</h3>
-        <p>Senior • Small • Lap cat who loves sunbeams.</p>
-        <button class="btn" data-apply data-name="Nala">Apply</button>
-      </article>
-      <article class="card adoptable" data-species="Dog" data-age="Puppy/Kitten" data-size="Large">
-        <img src="../Assets/download (2).webp" alt="Sketch of a puppy" class="card-media" width="120" height="120">
-        <h3>Zeus</h3>
-        <p>Puppy • Large • Goofy and energetic.</p>
-        <button class="btn" data-apply data-name="Zeus">Apply</button>
-      </article>
-      <article class="card adoptable" data-species="Other" data-age="Adult" data-size="Small">
-        <img src="../Assets/download (3).webp" alt="Sketch of a little bird" class="card-media" width="120" height="120">
-        <h3>Sunny</h3>
-        <p>Adult • Small • Socialised cockatiel.</p>
-        <button class="btn" data-apply data-name="Sunny">Apply</button>
-      </article>
-    </section>
-
-    <section aria-labelledby="adoptables-title">
-      <h2 id="adoptables-title">Available for Adoption</h2>
-      <div class="card-grid" id="adopt-grid">
-        <!-- Cards injected by JS from a local dataset -->
-      </div>
-    </section>
-
-    <template id="pet-card">
-      <article class="card pet-card">
-        <img src="" alt="" />
+        <img src="../assets/download 4.webp" alt="Friendly medium dog named Rufus" class="card-media">
         <div class="card-body">
-          <h3 class="pet-name"></h3>
-          <p class="pet-meta"></p>
-          <button class="btn small apply-btn" type="button">Apply to Adopt</button>
+          <h3>Rufus</h3>
+          <p>Adult • Medium • Friendly and house-trained.</p>
+          <button class="btn apply-btn" data-name="Rufus">Apply</button>
         </div>
       </article>
-    </template>
+
+      <article class="card adoptable" data-species="Cat" data-age="Senior" data-size="Small">
+        <img src="../assets/download (1).webp" alt="Senior cat named Nala" class="card-media">
+        <div class="card-body">
+          <h3>Nala</h3>
+          <p>Senior • Small • Lap cat who loves sunbeams.</p>
+          <button class="btn apply-btn" data-name="Nala">Apply</button>
+        </div>
+      </article>
+
+      <article class="card adoptable" data-species="Dog" data-age="Puppy/Kitten" data-size="Large">
+        <img src="../assets/download (2).webp" alt="Energetic puppy named Zeus" class="card-media">
+        <div class="card-body">
+          <h3>Zeus</h3>
+          <p>Puppy • Large • Goofy and energetic.</p>
+          <button class="btn apply-btn" data-name="Zeus">Apply</button>
+        </div>
+      </article>
+
+      <article class="card adoptable" data-species="Other" data-age="Adult" data-size="Small">
+        <img src="../assets/download (3).webp" alt="Colorful bird named Sunny" class="card-media">
+        <div class="card-body">
+          <h3>Sunny</h3>
+          <p>Adult • Small • Socialised cockatiel who loves people.</p>
+          <button class="btn apply-btn" data-name="Sunny">Apply</button>
+        </div>
+      </article>
+    </section>
 
     <!-- Application Modal -->
     <dialog id="apply-modal" aria-labelledby="apply-title">
       <form method="dialog" id="apply-form">
         <h2 id="apply-title">Adoption Application</h2>
         <p id="apply-pet"></p>
-        <label for="app-name">Full name</label>
+        <label for="app-name">Full Name</label>
         <input id="app-name" name="name" required />
+
         <label for="app-email">Email</label>
         <input id="app-email" name="email" type="email" required />
+
         <label for="app-message">Message</label>
         <textarea id="app-message" name="message" rows="4" placeholder="Tell us about your home and experience with pets"></textarea>
+
         <div class="dialog-actions">
           <button class="btn secondary" value="cancel">Cancel</button>
           <button class="btn" value="submit">Submit</button>
         </div>
       </form>
     </dialog>
-
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
       <div class="social-icons">
-        <a href="https://www.facebook.com/share/14LPC4fTP88/?mibextid=wwXIfr" target="_blank" aria-label="facebook">
+        <a href="https://www.facebook.com/share/14LPC4fTP88/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
         <a href="https://wa.me/0767467581" target="_blank" aria-label="WhatsApp">
@@ -151,6 +160,11 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- JavaScript -->
+  <script src="../js/script.js"></script>
+  <script>
+    // Footer Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

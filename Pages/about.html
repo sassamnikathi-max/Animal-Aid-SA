@@ -1,107 +1,191 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head<!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+<head>
+  <!-- Meta Tags for SEO -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="About Animal Aid SA — mission, vision, programs, and impact." />
+  <meta name="description" content="Learn about Animal Aid SA — our mission, vision, and the people behind our rescue and rehabilitation programs." />
+  <meta name="keywords" content="Animal Aid SA, animal rescue, rehabilitation, adoption, South Africa" />
+  <meta name="author" content="Animal Aid SA Team" />
   <title>About | Animal Aid SA</title>
-  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="about">
-  <!-- Skip link for accessibility -->
+  <!-- Skip link -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header Section -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Animal Aid SA home">
-        <img src="../Assets/OIP (1).webp" alt="Animal Aid SA logo" />
+      <a class="logo" href="../index.html" aria-label="Animal Aid SA home">
+        <img src="../assets/OIP (1).webp" alt="Animal Aid SA logo" />
         <span>Animal Aid SA</span>
       </a>
-      <!-- Navigation Menu -->
-      <nav class="site-nav" aria-label="Primary navigation">
+      <!-- Navigation -->
+      <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
         <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">
           ☰ Menu
         </button>
-          <a href="/index.html" aria-current="page">Home</a>
-          <a href="/Pages/about.html">About</a>
-          <a href="/Pages/adopt.html">Adopt</a>
-          <a href="/Pages/donate.html">Donate</a>
-          <a href="/Pages/enquiry.html">Enquire</a>
-          <a href="/Pages/contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="donate.html">Donate</a>
+        <a href="enquiry.html">Enquire</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main id="main" class="container" role="main">
-    <!-- Page Header -->
+
+    <!-- About Intro -->
     <header class="page-header">
       <h1>About Animal Aid SA</h1>
-      <p>Animal Aid SA was founded in 2010 by a group of Johannesburg veterinarians and animal-welfare advocates who saw a critical gap in emergency response for abused pets. Since then, we’ve rescued over 4 500 animals, partnered with 20 local shelters, and educated thousands of learners about responsible pet ownership.</p>
+      <p>Founded in 2010 by veterinarians and animal advocates in Johannesburg, Animal Aid SA is dedicated to saving, healing, and rehoming abused and abandoned animals. With over 4,500 rescues and partnerships with 20 shelters, our mission grows stronger each year.</p>
     </header>
 
-    <!-- Mission & Vision -->
-    <section id="mission-vision" class="split">
-      <div>
-        <h2>Mission</h2>
-        <p>To ensure the humane treatment of animals through rescue, rehabilitation, adoption, and public education, creating a culture of compassion in every South African community.</p>
-      </div>
-      <div>
-        <h2>Vision</h2>
-        <p>A future where every animal lives free from cruelty and neglect, cared for by an informed and compassionate society.</p>
+    <!-- Mission and Vision (Accordion Feature) -->
+    <section id="mission-vision">
+      <h2>Our Mission & Vision</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">Mission</button>
+          <div class="accordion-body">
+            <p>To ensure the humane treatment of animals through rescue, rehabilitation, adoption, and public education—building a compassionate culture in South Africa.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Vision</button>
+          <div class="accordion-body">
+            <p>A nation where every animal lives free from cruelty and neglect, nurtured by a caring and educated society.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Core Programs -->
-    <section id="programs">
-      <h2>Core Programs</h2>
-      <ul class="checklist">
-        <li>Emergency rescue operations</li>
-        <li>Veterinary care and rehabilitation</li>
-        <li>Adoption & fostering</li>
-        <li>Community education & outreach</li>
-        <li>Reporting channels for animal cruelty</li>
-      </ul>
-    </section>
-
-    <!-- Impact Metrics -->
-    <section id="impact">
-      <h2>Impact Metrics</h2>
+    <!-- Impact Statistics (Animated Counters) -->
+    <section id="impact" class="stats-section">
+      <h2>Our Impact</h2>
       <div class="stats">
-        <div class="stat"><strong>300+</strong><span>Animals rescued (year)</span></div>
-        <div class="stat"><strong>120+</strong><span>Successful adoptions</span></div>
-        <div class="stat"><strong>80</strong><span>Active volunteers</span></div>
+        <div class="stat"><strong id="rescued">0</strong><span>Animals rescued this year</span></div>
+        <div class="stat"><strong id="adopted">0</strong><span>Successful adoptions</span></div>
+        <div class="stat"><strong id="volunteers">0</strong><span>Active volunteers</span></div>
       </div>
     </section>
+
+    <!-- Our Team -->
+    <section id="team">
+      <h2>Meet Our Team</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img src="/Assets/dr.webp" alt="Dr. Lerato, Senior Veterinarian" />
+          <div class="card-body">
+            <h3>Dr. Lerato Mokoena</h3>
+            <p>Founder & Lead Veterinarian — With 15 years in animal welfare, Dr. Lerato leads our mission with compassion and expertise.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="/Assets/team.webp" alt="Volunteer helping a rescued puppy" />
+          <div class="card-body">
+            <h3>Volunteer Team</h3>
+            <p>Over 80 dedicated volunteers across Gauteng work tirelessly to rescue, foster, and educate the public on animal care.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery">
+      <h2>Behind the Scenes</h2>
+      <div class="gallery-grid">
+        <img src="/Assets/r.webp" alt="Rescue in action" class="lightbox-img" />
+        <img src="/Assets/rehab.webp" alt="Dog rehabilitation" class="lightbox-img" />
+        <img src="/Assets/ado.webp" alt="Happy adoption day" class="lightbox-img" />
+      </div>
+    </section>
+
+   
+
   </main>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Animal Aid SA • Johannesburg, South Africa</p>
       <div class="social-icons">
-        <a href="https://www.facebook.com/share/14LPC4fTP88/?mibextid=wwXIfr" target="_blank" aria-label="facebook">
+        <a href="https://www.facebook.com/share/14LPC4fTP88/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
         <a href="https://wa.me/0767467581" target="_blank" aria-label="WhatsApp">
           <i class="fab fa-whatsapp"></i>
-          
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript for Dynamic Year -->
+  <!-- JavaScript -->
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Accordion
+    const accordions = document.querySelectorAll(".accordion-header");
+    accordions.forEach(header => {
+      header.addEventListener("click", () => {
+        header.classList.toggle("active");
+        const body = header.nextElementSibling;
+        body.style.maxHeight = body.style.maxHeight ? null : body.scrollHeight + "px";
+      });
+    });
+
+    // Counter animation
+    function animateCounter(id, target) {
+      let count = 0;
+      const speed = 20;
+      const counter = document.getElementById(id);
+      const update = setInterval(() => {
+        count += 5;
+        counter.textContent = count;
+        if (count >= target) clearInterval(update);
+      }, speed);
+    }
+    animateCounter("rescued", 300);
+    animateCounter("adopted", 120);
+    animateCounter("volunteers", 80);
+
+    // Lightbox
+    const images = document.querySelectorAll(".lightbox-img");
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        const lightbox = document.createElement("div");
+        lightbox.classList.add("lightbox");
+        lightbox.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+        document.body.appendChild(lightbox);
+        lightbox.addEventListener("click", () => lightbox.remove());
+      });
+    });
+
+    // Google Map
+    function initMap() {
+      const location = { lat: -26.2041, lng: 28.0473 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: location,
+      });
+      new google.maps.Marker({ position: location, map: map, title: "Animal Aid SA" });
+    }
   </script>
-  <script src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
+
+
