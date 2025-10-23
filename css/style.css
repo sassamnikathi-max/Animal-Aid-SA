@@ -590,3 +590,24 @@ input:focus, textarea:focus, select:focus {
   .container { width: 94%; }
 }
 
+/* Mobile nav hidden initially */
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .site-nav.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--clr-text);
+    cursor: pointer;
+  }
+}
