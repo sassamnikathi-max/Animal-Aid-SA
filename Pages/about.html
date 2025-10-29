@@ -31,9 +31,8 @@
       </a>
       <!-- Navigation -->
       <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
-        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">
-          ☰ Menu
-        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
         <a href="../index.html">Home</a>
         <a href="about.html" aria-current="page">About</a>
         <a href="adopt.html">Adopt</a>
@@ -133,10 +132,19 @@
   </footer>
 
   <!-- JavaScript -->
+  
+    <!-- ✅ Burger Toggle + Page Scripts -->
   <script>
-    // Footer year
+    // Update footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+
+    navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('active');
+    });
     // Accordion
     const accordions = document.querySelectorAll(".accordion-header");
     accordions.forEach(header => {

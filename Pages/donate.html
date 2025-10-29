@@ -30,7 +30,8 @@
 
       <!-- Navigation Menu -->
       <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
-        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰ Menu</button>
+       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
         <a href="../index.html">Home</a>
         <a href="about.html">About</a>
         <a href="adopt.html">Adopt</a>
@@ -119,10 +120,21 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="../js/script.js"></script>
+  <script src="/script.js"></script>
+  <!-- ✅ Burger Toggle + Adoption Page Scripts -->
   <script>
-    // Footer Year
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // --- Mobile Menu Toggle ---
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        siteNav.classList.toggle('active');
+      });
+    }
+
 
     // Donation impact message
     const amountInput = document.getElementById("donation-amount");

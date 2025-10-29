@@ -31,7 +31,8 @@
 
       <!-- Navigation -->
       <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
-        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰ Menu</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
         <a href="../index.html">Home</a>
         <a href="about.html">About</a>
         <a href="adopt.html" aria-current="page">Adopt</a>
@@ -161,10 +162,58 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="../js/script.js"></script>
+  <script src="/script.js"></script>
+
+  <!-- ✅ Burger Toggle + Adoption Page Scripts -->
   <script>
-    // Footer Year
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // --- Mobile Menu Toggle ---
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        siteNav.classList.toggle('active');
+      });
+    }
+
+    // --- Filter Functionality ---
+    const speciesSelect = document.getElementById('species');
+    const ageSelect = document.getElementById('age');
+    const sizeSelect = document.getElementById('size');
+    const cards = document.querySelectorAll('.adoptable');
+
+    function filterAnimals() {
+      const species = speciesSelect.value;
+      const age = ageSelect.value;
+      const size = sizeSelect.value;
+
+      cards.forEach(card => {
+        const match =
+          (species === 'all' || card.dataset.species === species) &&
+          (age === 'all' || card.dataset.age === age) &&
+          (size === 'all' || card.dataset.size === size);
+        card.style.display = match ? 'block' : 'none';
+      });
+    }
+
+    [speciesSelect, ageSelect, sizeSelect].forEach(select => {
+      select.addEventListener('change', filterAnimals);
+    });
+
+    // --- Application Modal ---
+    const modal = document.getElementById('apply-modal');
+    const applyBtns = document.querySelectorAll('.apply-btn');
+    const petNameDisplay = document.getElementById('apply-pet');
+
+    applyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        petNameDisplay.textContent = `Applying to adopt: ${btn.dataset.name}`;
+        modal.showModal();
+      });
+    });
   </script>
 </body>
 </html>
+
