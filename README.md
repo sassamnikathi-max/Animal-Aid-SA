@@ -93,12 +93,33 @@ Samkelisiwe – ST10459928
 - Integrated Font Awesome icons for Facebook and WhatsApp in footer.
 
 ### v1.3.0 – Functionality & Part 3 Update (2025-10-19)
-- Added `js/script.js` for interactivity: nav toggle, smooth scroll, lightbox, filters, modal adoption form, form validation, animated counters and scroll reveal effects.
-- Added short CSS animation utilities (fade-in, zoom-in, pulse) and improved card hover 3D effects.
-- Implemented client-side form validation for contact and enquiry forms with accessible feedback (aria-live).
+### v1.3.0 – Functionality & Part 3 Update (2025-10-19)
+- Added `js/script.js` for interactivity:
+  - Mobile navigation toggle with animated burger icon.
+  - Smooth scrolling for internal links.
+  - Image lightbox for Adopt page with responsive sizing.
+  - Filters for adoptable pets by type or category.
+  - Modal adoption form with accessible focus management.
+  - Client-side form validation for contact and enquiry forms with live feedback (aria-live).
+  - Animated counters for stats and metrics.
+  - Scroll reveal and fade-in animations for page elements.
+- Added short CSS animation utilities:
+  - `.fade-in` and `.zoom-in` for scroll-triggered effects.
+  - `.pulse` animation for call-to-action buttons.
+  - Improved 3D hover effects for cards and images.
+  - Subtle card shine effect on hover.
+- Fixed accordion on About page for Mission & Vision:
+  - Smooth open/close animation with max-height and padding transitions.
+  - Active state toggle controlled by JavaScript.
+- Improved mobile navigation:
+  - Burger menu toggles the `.active` class correctly.
+  - Dropdown animation for nav links using keyframes.
+  - Nav links stacked neatly and full-width on small screens.
 - Embedded responsive Google Maps iframes for multiple locations.
-- Added robots.txt and sitemap.xml for SEO.
-- Updated README with Part 3 notes and Harvard-style references.
+- SEO improvements:
+  - Added `robots.txt` and `sitemap.xml`.
+- Updated README with Part 3 notes and references.
+
 
 ## References (Harvard Style)
 - Google (2024) *Google Maps Embed API*. Available at: https://developers.google.com/maps/documentation/embed (Accessed: 19 October 2025).  
