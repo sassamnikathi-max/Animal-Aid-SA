@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body class="adopt">
 
@@ -24,21 +24,25 @@
   <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="logo" href="../index.html" aria-label="Animal Aid SA home">
-        <img src="../assets/OIP (1).webp" alt="Animal Aid SA logo" />
+      <a class="logo" href="/index.html" aria-label="Animal Aid SA home">
+        <img src="/Assets/OIP (1).webp " alt="Animal Aid SA Logo" />
         <span>Animal Aid SA</span>
       </a>
 
-      <!-- Navigation -->
+      <!-- Burger Toggle -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <!-- Navigation Menu -->
       <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-
-        <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="adopt.html" aria-current="page">Adopt</a>
-        <a href="donate.html">Donate</a>
-        <a href="enquiry.html">Enquire</a>
-        <a href="contact.html">Contact</a>
+        <a href="/index.html" aria-current="page">Home</a>
+        <a href="/Pages/about.html">About</a>
+        <a href="/Pages/adopt.html">Adopt</a>
+        <a href="/Pages/donate.html">Donate</a>
+        <a href="/Pages/enquiry.html">Enquire</a>
+        <a href="/Pages/contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -162,21 +166,20 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="/script.js"></script>
+  <script src="../script.js"></script>
 
   <!-- ✅ Burger Toggle + Adoption Page Scripts -->
   <script>
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // --- Mobile Menu Toggle ---
+    // Mobile menu toggle
     const navToggle = document.querySelector('.nav-toggle');
     const siteNav = document.querySelector('.site-nav');
-    if (navToggle) {
-      navToggle.addEventListener('click', () => {
-        siteNav.classList.toggle('active');
-      });
-    }
+
+    navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('active');
+    });
 
     // --- Filter Functionality ---
     const speciesSelect = document.getElementById('species');

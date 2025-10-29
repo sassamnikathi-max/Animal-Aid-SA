@@ -1,111 +1,77 @@
-// ===========================================
-// Animal Aid SA - JavaScript
-// ===========================================
+// ===========================
+//   ANIMAL AID JS SCRIPT
+// ===========================
 
-// Wait until DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
+// --- Footer Year ---
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  // -------------------------------
-  // ✅ Footer Year
-  // -------------------------------
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+// --- Mobile Burger Menu ---
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.querySelector('.site-nav');
 
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('active');
+    navToggle.classList.toggle('open');
+  });
+}
 
-  // -------------------------------
-  // ✅ Mobile Menu Toggle
-  // -------------------------------
-  const navToggle = document.querySelector(".nav-toggle");
-  const siteNav = document.querySelector(".site-nav");
-
-  if (navToggle && siteNav) {
-    // Create animated burger lines if not included
-    if (!navToggle.innerHTML.trim()) {
-      navToggle.innerHTML = `
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-      `;
-    }
-
-    // Toggle mobile nav visibility
-    navToggle.addEventListener("click", () => {
-      siteNav.classList.toggle("active");
-      navToggle.classList.toggle("open");
-    });
-
-    // Close nav when clicking a link (on small devices)
-    document.querySelectorAll(".site-nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
-          siteNav.classList.remove("active");
-          navToggle.classList.remove("open");
-        }
-      });
-    });
-  }
-
-
-  // -------------------------------
-  // ✅ Adopt Page - Filter System
-  // -------------------------------
-  const filterForm = document.getElementById("filter-form");
-  const adoptGrid = document.getElementById("adopt-grid");
-
-  if (filterForm && adoptGrid) {
-    filterForm.addEventListener("change", () => {
-      const species = document.getElementById("species").value;
-      const age = document.getElementById("age").value;
-      const size = document.getElementById("size").value;
-
-      document.querySelectorAll(".adoptable").forEach(card => {
-        const matchSpecies = species === "all" || card.dataset.species === species;
-        const matchAge = age === "all" || card.dataset.age === age;
-        const matchSize = size === "all" || card.dataset.size === size;
-
-        if (matchSpecies && matchAge && matchSize) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    });
-  }
-
-
-  // -------------------------------
-  // ✅ Adopt Modal (Apply Button)
-  // -------------------------------
-  const modal = document.getElementById("apply-modal");
-  const applyBtns = document.querySelectorAll(".apply-btn");
-  const applyPet = document.getElementById("apply-pet");
-
-  if (modal && applyBtns.length > 0) {
-    applyBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const petName = btn.dataset.name;
-        applyPet.textContent = `You're applying to adopt ${petName}. Please fill in your details below.`;
-        modal.showModal();
-      });
-    });
-
-    // Close modal when Cancel button is clicked
-    modal.addEventListener("close", () => {
-      document.getElementById("apply-form").reset();
-    });
-  }
-
-
-  // -------------------------------
-  // ✅ Fade-In Animation on Scroll
-  // -------------------------------
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("inview");
+// --- Accordion (Mission & Vision) ---
+const accordions = document.querySelectorAll(".accordion-header");
+accordions.forEach(header => {
+  header.addEventListener("click", () => {
+    // Close others
+    accordions.forEach(h => {
+      if (h !== header) {
+        h.classList.remove("active");
+        h.nextElementSibling.style.maxHeight = null;
       }
     });
-  }, { threshold: 0.2 });
 
-  document.querySelectorAll(".fade-in, .zoom-in").forEach(el => observer.observe(el));
+    // Toggle current one
+    header.classList.toggle("active");
+    const body = header.nextElementSibling;
+    if (body.style.maxHeight) {
+      body.style.maxHeight = null;
+    } else {
+      body.style.maxHeight = body.scrollHeight + "px";
+    }
+  });
 });
+
+// --- Counter Animation ---
+function animateCounter(id, target) {
+  let count = 0;
+  const speed = 20;
+  const counter = document.getElementById(id);
+  const update = setInterval(() => {
+    count += 5;
+    counter.textContent = count;
+    if (count >= target) clearInterval(update);
+  }, speed);
+}
+animateCounter("rescued", 300);
+animateCounter("adopted", 120);
+animateCounter("volunteers", 80);
+
+// --- Lightbox Image Viewer ---
+const images = document.querySelectorAll(".lightbox-img");
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    const lightbox = document.createElement("div");
+    lightbox.classList.add("lightbox");
+    lightbox.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+    document.body.appendChild(lightbox);
+    lightbox.addEventListener("click", () => lightbox.remove());
+  });
+});
+
+// --- Google Map ---
+function initMap() {
+  const location = { lat: -26.2041, lng: 28.0473 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 12,
+    center: location,
+  });
+  new google.maps.Marker({ position: location, map: map, title: "Animal Aid SA" });
+}

@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body class="about">
   <!-- Skip link -->
@@ -25,20 +25,25 @@
   <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="logo" href="../index.html" aria-label="Animal Aid SA home">
-        <img src="../assets/OIP (1).webp" alt="Animal Aid SA logo" />
+      <a class="logo" href="/index.html" aria-label="Animal Aid SA home">
+        <img src="/Assets/OIP (1).webp " alt="Animal Aid SA Logo" />
         <span>Animal Aid SA</span>
       </a>
-      <!-- Navigation -->
-      <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
-        <a href="../index.html">Home</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="adopt.html">Adopt</a>
-        <a href="donate.html">Donate</a>
-        <a href="enquiry.html">Enquire</a>
-        <a href="contact.html">Contact</a>
+      <!-- Burger Toggle -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <!-- Navigation Menu -->
+      <nav class="site-nav" aria-label="Primary navigation" id="primary-menu">
+        <a href="/index.html" aria-current="page">Home</a>
+        <a href="/Pages/about.html">About</a>
+        <a href="/Pages/adopt.html">Adopt</a>
+        <a href="/Pages/donate.html">Donate</a>
+        <a href="/Pages/enquiry.html">Enquire</a>
+        <a href="/Pages/contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -132,7 +137,7 @@
   </footer>
 
   <!-- JavaScript -->
-  
+  <script src="../script.js"></script>
     <!-- ✅ Burger Toggle + Page Scripts -->
   <script>
     // Update footer year
@@ -145,6 +150,7 @@
     navToggle.addEventListener('click', () => {
       siteNav.classList.toggle('active');
     });
+
     // Accordion
     const accordions = document.querySelectorAll(".accordion-header");
     accordions.forEach(header => {
