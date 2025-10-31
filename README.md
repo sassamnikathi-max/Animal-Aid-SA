@@ -35,7 +35,7 @@ css/
   *Main stylesheet (dark theme, animations, responsive rules)*
 
 images/
-- rescue1.jpg, rescue2.jpg, dog1.jpg, cat1.jpg …  
+- ado.webp, cats.webp,download(1).webp ,download(2).webp,download(3).webp,download(4).webp,download.webp,dr.webp,ginger.webp,healed dog.webp, OIP(1).webp , OIP(2).webp , OIP(3).webp,OIP.webp, playful kittens.webp, r.webp, rehab.webp,rescued puppy.webp,sarah.webp, team.webp,v.webp ...
   *Images used in the site*
 - screenshot-desktop.png  
   *Desktop screenshot*
@@ -135,11 +135,11 @@ Samkelisiwe – ST10459928
 The following screenshots demonstrate the website’s responsiveness on different screen sizes:
 
 ### Desktop View
-![Desktop view of the homepage](/images/screenshot-desktop.png)
+![Desktop view of the homepage](/Assets/SCREENSHOT-DESKTOP.PNG)
 
 ### Tablet View
-![Tablet view of the homepage](/images/screenshot-tablet.png)
+![Tablet view of the homepage](/Assets/screenshot-tablet.png)
 
 ### Mobile View
-![Mobile view of the homepage](/images/screenshot-mobile.png)
+![Mobile view of the homepage](/Assets/screenshot-mobile.png)
 `
