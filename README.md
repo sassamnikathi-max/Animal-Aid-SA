@@ -94,31 +94,20 @@ Samkelisiwe – ST10459928
 
 ### v1.3.0 – Functionality & Part 3 Update (2025-10-19)
 ### v1.3.0 – Functionality & Part 3 Update (2025-10-19)
-- Added `js/script.js` for interactivity:
-  - Mobile navigation toggle with animated burger icon.
-  - Smooth scrolling for internal links.
-  - Image lightbox for Adopt page with responsive sizing.
-  - Filters for adoptable pets by type or category.
-  - Modal adoption form with accessible focus management.
-  - Client-side form validation for contact and enquiry forms with live feedback (aria-live).
-  - Animated counters for stats and metrics.
-  - Scroll reveal and fade-in animations for page elements.
-- Added short CSS animation utilities:
-  - `.fade-in` and `.zoom-in` for scroll-triggered effects.
-  - `.pulse` animation for call-to-action buttons.
-  - Improved 3D hover effects for cards and images.
-  - Subtle card shine effect on hover.
-- Fixed accordion on About page for Mission & Vision:
-  - Smooth open/close animation with max-height and padding transitions.
-  - Active state toggle controlled by JavaScript.
-- Improved mobile navigation:
-  - Burger menu toggles the `.active` class correctly.
-  - Dropdown animation for nav links using keyframes.
-  - Nav links stacked neatly and full-width on small screens.
-- Embedded responsive Google Maps iframes for multiple locations.
-- SEO improvements:
-  - Added `robots.txt` and `sitemap.xml`.
-- Updated README with Part 3 notes and references.
+-Documented all features by page in README.
+-Fixed typography spacing in navigation.
+-Improved header text responsiveness (H1 scaling).
+-Added layout container for Google Map.
+-Updated references to proper Harvard style.
+-Added js/script.js for interactivity across all pages:Mobile navigation toggle with animated burger icon.Smooth scrolling for internal links.
+-Adopt page:Responsive image lightbox for viewing pet images.Filters to sort adoptable pets by type or category.Modal adoption form with accessible focus management.
+-Contact page and forms (including adoption enquiry):Client-side form validation using JavaScript.Accessible feedback with aria-live regions for errors and confirmations.
+-Dynamic visual enhancements across Home, About, and Adopt pages:Animated counters for stats and metrics.Scroll-triggered reveal effects (fade-in and zoom-in).Call-to-action buttons with pulsing animation.Cards updated with 3D hover and subtle shine effects.
+-About page:Accordion for Mission & Vision section with smooth open/close animation.Active state controlled via JavaScript to allow only one panel open at a time.
+-Improved mobile navigation:Burger menu toggles .active class correctly.Dropdown nav links animate smoothly and stack neatly on small screens.
+-Contact page and location sections:Embedded responsive Google Maps iframes.
+SEO improvements:Added robots.txt and sitemap.xml.
+Updated README with Part 3 explanations, detailed feature descriptions, and updated Harvard-style references.
 
 
 ## References (Harvard Style)
